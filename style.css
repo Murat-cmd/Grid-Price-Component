@@ -1,0 +1,171 @@
+:root{
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla',sans-serif;
+    font-weight: 400;
+    list-style: none;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Light-Gray);
+}
+
+.container{
+    width: 55%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1.5fr;
+    
+}
+
+.cell-top{
+    grid-column: span 2;
+    background-color: white;
+    padding: 35px 40px;
+    
+}
+
+h1.main-heading{
+    font-size: 1.9rem;
+    
+    color: var(--Cyan);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.offer{
+    font-weight: 700;
+    color: var(--Bright-Yellow);
+    margin-bottom: 10px;
+}
+
+.description{
+    color: var(--Grayish-Blue);
+    width: 80%;
+    line-height: 23px;
+}
+
+.cell-bottom-l{
+    padding: 40px 50px;
+    background-color: var(--Cyan);
+}
+.cell-bottom-r{
+    padding: 40px 50px;
+    
+}
+
+.sub-heading-1{
+  color: white;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.sub-heading-2{
+    color: white;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+li{
+    color: white;
+    font-size: 0.9rem;
+    line-height: 20.6px;
+    font-weight: 400;
+}
+
+ol{
+    margin-top: 20px;
+}
+
+.price{
+    font-size: 2.3rem;
+    color: white;
+    font-weight: 700;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.price::after{
+    content: "per month";
+    font-size: 0.9rem;
+    color:var(--Light-Gray);
+    position: relative;
+    left: 10%;
+}
+
+.small-p{
+    color: white;
+    margin-top: 7px ;
+    font-weight: 200;
+}
+
+.sign-btn{
+    min-width: 93%;
+    margin-top: 25px;
+    height: 50px;
+    font-size: 1.0rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--Bright-Yellow);
+    cursor: pointer;
+}
+
+
+.cell-bottom-r{
+    background-color:hsl(179, 73%, 45%) ;
+}
+
+
+@media (max-width:375px){
+    .container{
+        width: 90%;
+        height: 65%;
+        margin: 0px auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-bottom: 50%;
+
+    }
+
+    p.description{
+        width: 100%;
+    }
+
+    .cell-top{
+        padding-left: 35px;
+    }
+
+    .cell-bottom-l{
+        grid-row: 2/3;
+        padding-left: 35px ;
+    }
+    .cell-bottom-r{
+        grid-row: 3/4;
+        padding-left: 35px ;
+    }
+    .small-p{
+        font-size: 0.8rem;
+        width: 100%;
+        
+    }
+
+    .sign-btn{
+        width: 100%;
+    }
+}
